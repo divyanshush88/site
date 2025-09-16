@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram-Style Chat App</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #1a1a1a;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+        }
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .note {
+            background-color: #fffbe6;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Instagram-Style Chat Application</h1>
+        <p>This repository contains the source code for a full-stack, real-time chat application built with React, Node.js, Express, and Socket.IO.</p>
+
+        <h2>Running the Project Locally</h2>
+        <p>To run this application on your local machine, you need to start both the backend server and the frontend development server.</p>
+
+        <h3>1. Start the Backend</h3>
+        <p>Navigate to the <code>backend</code> directory and run the following commands:</p>
+        <pre><code># Install dependencies
+npm install
+
+# Start the server (requires MongoDB to be running)
+node server.js</code></pre>
+        <p>The backend will be running on <code>http://localhost:3001</code>.</p>
+
+        <h3>2. Start the Frontend</h3>
+        <p>In a separate terminal, navigate to the <code>frontend</code> directory and run:</p>
+        <pre><code># Install dependencies
+npm install
+
+# Start the React development server
+npm start</code></pre>
+        <p>The application will open in your browser at <code>http://localhost:3000</code>.</p>
+
+        <div class="note">
+            <p><strong>Note on Deployment:</strong> This project consists of a Node.js backend and a React frontend. For a live deployment, you have two main options:</p>
+            <ol>
+                <li><strong>All-in-One:</strong> Deploy the entire project to a service that supports Node.js (like Render or Heroku). The Node.js server will serve the built React application.</li>
+                <li><strong>Separate Services:</strong> Deploy the backend to a Node.js hosting service and the frontend to a static site host (like GitHub Pages, Vercel, or Netlify). You will need to update the frontend code to point to your live backend URL.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
