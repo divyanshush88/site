@@ -18,7 +18,7 @@ const server = http.createServer(app);
 // Initialize a new instance of socket.io by passing the server object
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:3000", "http://localhost:57950", "http://10.108.84.99:57950"],
+    origin: ["http://localhost:3000", "http://localhost:57950", "http://10.108.84.99:57950", "https://site-4-ljwe.onrender.com"],
     methods: ["GET", "POST"]
   }
 });
@@ -44,7 +44,7 @@ app.use((req, res) => {
 });
 
 // --- Database and Server Startup ---
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/chatapp';
+const MONGODB_URI = process.env.MONGODB_URI ||  'mongodb+srv://divyanshush88:ds3465797@cluster022.ekdup.mongodb.net/';
 mongoose.connect(MONGODB_URI).then(() => {
   console.log('✅ MongoDB connected successfully.');
   server.listen(PORT, () => {
@@ -112,4 +112,5 @@ io.on('connection', async (socket) => {
       console.log(`User ${socket.username} disconnected`);
     }
   });
+
 });
