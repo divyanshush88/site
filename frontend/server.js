@@ -18,7 +18,7 @@ const server = http.createServer(app);
 // Initialize a new instance of socket.io by passing the server object
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:3000", "http://localhost:57950", "http://10.108.84.99:57950", "https://site-4-ljwe.onrender.com"],
+    origin: ["http://localhost:3000", "http://localhost:57950", "http://10.108.84.99:57950", "https://site-4-ljwe.onrender.com", "https://chatapp1-backend.onrender.com"],
     methods: ["GET", "POST"]
   }
 });
