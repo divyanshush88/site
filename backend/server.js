@@ -44,7 +44,7 @@ app.use((req, res) => {
 });
 
 // --- Database and Server Startup ---
-const MONGODB_URI = process.env.MONGODB_URI ||  'mongodb+srv://divyanshush88:ds3465797@cluster022.ekdup.mongodb.net/';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://divyanshush88:ds3465797@cluster022.ekdup.mongodb.net/';
 mongoose.connect(MONGODB_URI).then(() => {
   console.log('✅ MongoDB connected successfully.');
   server.listen(PORT, () => {
@@ -112,5 +112,4 @@ io.on('connection', async (socket) => {
       console.log(`User ${socket.username} disconnected`);
     }
   });
-
 });
