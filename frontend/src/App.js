@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import './App.css';
 
 // Connect to the backend server
-const socket = io('http://localhost:3001');
+const socket = io(process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001');
 
 function App() {
   // User & Auth State
