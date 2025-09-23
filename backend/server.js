@@ -16,9 +16,13 @@ app.use(express.static(path.join(__dirname, '../frontend/build')));
 const server = http.createServer(app);
 
 // Initialize a new instance of socket.io by passing the server object
+const allowedOrigins = process.env.NODE_ENV === 'production' 
+  ? ["https://site-4-ljwe.onrender.com", "https://chatapp1-backend.onrender.com", "https://your-frontend-app.onrender.com"] 
+  : ["http://localhost:3000", "http://localhost:57950", "http://10.108.84.99:57950", "https://site-4-ljwe.onrender.com", "https://chatapp1-backend.onrender.com"];
+
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:3000", "http://localhost:57950", "http://10.108.84.99:57950", "https://site-4-ljwe.onrender.com", "https://chatapp1-backend.onrender.com", "https://your-frontend-app.onrender.com"], // Add your frontend's Render URL here
+    origin: allowedOrigins,
     methods: ["GET", "POST"]
   }
 });
